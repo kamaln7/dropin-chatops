@@ -1,0 +1,29 @@
+team = ""
+token = ""
+listenaddress = "0.0.0.0:4000"
+timeout = "5m"
+
+[[users]]
+    name = "user"
+    id = "U123"
+
+[[channels]]
+    name = "channel"
+    id = "G123"
+
+[[commands]]
+    name = "echo"
+    description = "This is a test command"
+    executable = "/bin/echo"
+    chdir = "/tmp"
+    args = []
+    takesArguments = true
+
+[[commands]]
+    name = "sleep"
+    description = "This command should fail"
+    executable = "/bin/sleep"
+    chdir = "/tmp"
+    args = ["5"]
+    takesArguments = false
+    timeout = "2s"
